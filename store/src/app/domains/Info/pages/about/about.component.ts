@@ -1,12 +1,29 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
+import { CounterComponent } from "../../../Shared/components/counter/counter.component";
+
 
 @Component({
   selector: 'app-about',
   standalone: true,
-  imports: [],
+  imports: [CounterComponent, CounterComponent],
   templateUrl: './about.component.html',
   styleUrl: './about.component.css'
 })
 export class AboutComponent {
+
+  duration = signal(1000);
+  message = signal('Hola');
+
+  changeDuration(event: Event)
+  {
+    const input = event.target as HTMLInputElement;
+    this.duration.set(input.valueAsNumber);
+  }
+
+  changeMesage(event: Event)
+  {
+    const input = event.target as HTMLInputElement;
+    this.message.set(input.value);
+  }
 
 }
