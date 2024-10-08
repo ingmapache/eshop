@@ -40,7 +40,7 @@
       </div>
       <div class="flex items-center">
         <button class="p-2 border rounded relative" (click)="toggleSideMenu()">
-          <div class="absolute -top-3 -left-3 rounded h-5 w-5 bg-black text-white text-xs h-screen flex items-center justify-center">
+          <div class="absolute -top-3 -left-3 rounded h-5 w-5 bg-black text-white text-xs flex items-center justify-center">
             {{cart.length}}
           </div>
           <svg
@@ -100,7 +100,7 @@
       </div>
     }
     <div class="mt-auto flex justify-end">
-      <p class="text-xl font-semibold">Total: {{getTotalPrice()}}</p>
+      <p class="text-xl font-semibold">Total: {{total()}}</p>
     </div>
 </div>
 

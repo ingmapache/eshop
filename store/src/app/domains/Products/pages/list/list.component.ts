@@ -1,7 +1,7 @@
 import { Component, signal } from '@angular/core';
 import { ProductComponent } from './../../components/product/product.component';
 import { CommonModule } from '@angular/common';
-import { product } from '../../../Shared/components/counter/models/product.model';
+import { product } from '../../../Shared/models/product.model';
 import { HeaderComponent } from "../../../Shared/components/header/header.component";
 
 @Component({
