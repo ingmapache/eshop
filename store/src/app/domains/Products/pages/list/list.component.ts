@@ -2,11 +2,12 @@ import { Component, signal } from '@angular/core';
 import { ProductComponent } from './../../components/product/product.component';
 import { CommonModule } from '@angular/common';
 import { product } from '../../../Shared/components/counter/models/product.model';
+import { HeaderComponent } from "../../../Shared/components/header/header.component";
 
 @Component({
   selector: 'app-list',
   standalone: true,
-  imports: [CommonModule, ProductComponent],
+  imports: [CommonModule, ProductComponent, HeaderComponent],
   templateUrl: './list.component.html',
   styleUrl: './list.component.css'
 })
@@ -22,21 +23,21 @@ export class ListComponent {
       {
         id: Date.now(),
         title: 'Product 1',
-        price: 100,
+        price: 230,
         image: 'https://picsum.photos/640/640?r=21',
         createdOn: new Date().toISOString()
       },
       {
         id: Date.now(),
         title: 'Product 2',
-        price: 100,
+        price: 102,
         image: 'https://picsum.photos/640/640?r=11',
         createdOn: new Date().toISOString()
       },
       {
         id: Date.now(),
         title: 'Product 3',
-        price: 100,
+        price: 189,
         image: 'https://picsum.photos/640/640?r=31',
         createdOn: new Date().toISOString()
       }
