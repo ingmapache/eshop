@@ -13,6 +13,7 @@ import { product } from '../../../Shared/components/counter/models/product.model
 export class ListComponent {
 
   products = signal<product[]>([]);
+  cart = signal<product[]>([]);
   
   constructor()
   {
@@ -43,9 +44,8 @@ export class ListComponent {
     this.products.set(initProducts);
   }
 
-  fromChild(event: string)
+  addToCart(product: product)
   {
-    console.log('estamos en el padre');
-    console.log(event);
+    this.cart.update(prevState => [...prevState, product]);
   }
 }

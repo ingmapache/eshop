@@ -16,6 +16,6 @@ export class ProductComponent {
 
   addToCartHandler()
   {
-    this.addToCart.emit('Hola, huevos pto');
+    this.addToCart.emit(this.product);
   }
 }

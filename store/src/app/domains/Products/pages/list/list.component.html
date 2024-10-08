@@ -2,7 +2,7 @@
     @for (product of products(); track $index) {
         <app-product
             [product]="product"
-            (addToCart)="fromChild($event)"
+            (addToCart)="addToCart($event)"
         />
     }
 </div>
