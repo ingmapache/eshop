@@ -90,12 +90,12 @@
     @for (product of cart(); track $index) 
     {
       <div class="flex items-center border-b border-gray-300 py-4">
-          <img class="w-12 h-12 object-cover rounded" :[src]=product.image alt="Product Image">
-          <div class="ml-4">
-            <p class="text-gray-800">{{ product.title }}</p>
+          <img class="w-12 h-12 object-cover rounded" :[src]=product.images[0] alt="Product Image">
+          <div class="ml-2">
+            <p class="text-gray-800 text-sm">{{ product.title }}</p>
           </div>
-          <div class="ml-auto">
-            <p class="text-gray-600">{{ product.price }}</p>
+          <div class="ml-1">
+            <p class="text-gray-600 w-10" >{{ product.price + ' $'}}</p>
           </div>
       </div>
     }

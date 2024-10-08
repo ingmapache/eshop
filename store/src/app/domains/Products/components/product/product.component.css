@@ -7,7 +7,7 @@ tailwind.config = {
         }
       }
       fontFamily: {
-        'body': [
+      'body': [
       'Inter', 
       'ui-sans-serif', 
       'system-ui', 

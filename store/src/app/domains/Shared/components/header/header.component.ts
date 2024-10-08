@@ -1,5 +1,4 @@
 import { Component, inject, Input, signal, SimpleChanges } from '@angular/core';
-import { product } from '../../models/product.model';
 import { CartService } from '../../services/cart.service';
 
 @Component({
