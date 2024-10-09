@@ -19,6 +19,6 @@ export class CartService {
   {
     const cart = this.cart()
     const cartTotal = cart.reduce((total, product) => total + product.price, 0);
-    return cartTotal + " $";
+    return cartTotal;
   })
 }

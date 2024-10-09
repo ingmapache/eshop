@@ -6,7 +6,7 @@ import { HeaderComponent } from "@shared/components/header/header.component";
   selector: 'app-root',
   standalone: true,
   imports: [RouterOutlet, HeaderComponent],
-  template: '<div class="container mx-auto"><app-header></app-header><router-outlet /></div>'
+  template: '<div class="container mx-auto"><router-outlet /></div>'
 })
 export class AppComponent {
   title = 'store';

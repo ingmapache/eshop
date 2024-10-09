@@ -95,12 +95,12 @@
             <p class="text-gray-800 text-sm">{{ product.title }}</p>
           </div>
           <div class="ml-1">
-            <p class="text-gray-600 w-10" >{{ product.price + ' $'}}</p>
+            <p class="text-gray-600 w-10" >{{ product.price | currency: '$'}}</p>
           </div>
       </div>
     }
     <div class="mt-auto flex justify-end">
-      <p class="text-xl font-semibold">Total: {{total()}}</p>
+      <p class="text-xl font-semibold">Total: {{'$' + total()}}</p>
     </div>
 </div>
 
