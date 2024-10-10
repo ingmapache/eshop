@@ -14,4 +14,9 @@ export class ProductServiceService {
   {
     return this.http.get<product[]>('https://api.escuelajs.co/api/v1/products');
   }
+
+  getOneProduct(id: string)
+  {
+    return this.http.get<product>(`https://api.escuelajs.co/api/v1/products/${id}`);
+  }
 }
