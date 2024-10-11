@@ -16,7 +16,7 @@ import { category } from '@shared/models/category.model';
   templateUrl: './list.component.html',
   styleUrl: './list.component.css'
 })
-export class ListComponent {
+export default class ListComponent {
 
   private cartService = inject(CartService);
   private productService = inject(ProductServiceService);
