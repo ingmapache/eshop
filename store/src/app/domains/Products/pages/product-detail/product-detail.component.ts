@@ -2,6 +2,7 @@ import { Component, inject, Input, signal, } from '@angular/core';
 import { product } from '@shared/models/product.model';
 import { ProductServiceService } from '@shared/services/product.service';
 import { CommonModule } from '@angular/common';
+import { CartService } from '@shared/services/cart.service';
 
 @Component({
   selector: 'app-product-detail',
@@ -15,6 +16,7 @@ export class ProductDetailComponent {
   @Input() id? : string;
 
   private productService = inject(ProductServiceService);
+  private cartService = inject(CartService);
 
   product = signal<product | null>(null);
   coverImg = signal('');
@@ -42,5 +44,14 @@ export class ProductDetailComponent {
     this.coverImg.set(newImg)
   }
 
+  addToCart()
+  {
+    const product = this.product();
+    if (product)
+    {
+      this.cartService.addToCart(product);
+    }
 
+    
+  }
 }
