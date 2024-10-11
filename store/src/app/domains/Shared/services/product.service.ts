@@ -19,4 +19,15 @@ export class ProductServiceService {
   {
     return this.http.get<product>(`https://api.escuelajs.co/api/v1/products/${id}`);
   }
+
+  getProductsByCategory(category_id?: string)
+  {
+    const url = new URL('https://api.escuelajs.co/api/v1/products');
+    if (category_id)
+    {
+      url.searchParams.set('categoryId', category_id)
+    }
+
+    return this.http.get<product[]>(url.toString());
+  }
 }
