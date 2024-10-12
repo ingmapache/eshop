@@ -1,0 +1,1 @@
+import{Da as a,M as o,rb as e}from"./chunk-DYLMMZXX.js";var i=class r{constructor(){}cart=a([]);addToCart(c){this.cart.update(t=>[...t,c])}total=e(()=>this.cart().reduce((n,p)=>n+p.price,0));static \u0275fac=function(t){return new(t||r)};static \u0275prov=o({token:r,factory:r.\u0275fac,providedIn:"root"})};export{i as a};
